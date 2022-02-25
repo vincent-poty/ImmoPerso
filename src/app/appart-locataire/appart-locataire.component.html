@@ -1,0 +1,11 @@
+<div class="app-loc-card" >
+    
+    <h2>{{appLoc.Name | titlecase}}</h2>
+    <img [src]="appLoc.imageUrl" [title]="appLoc.Name" [alt]="appLoc.Name">
+    <p>{{ appLoc.description }}</p>
+    <p> Loyer mensuel de {{ appLoc.prixLoyer| currency: 'EUR'}}</p>
+    <p> Provision des charges de {{ appLoc.prixCharges | currency: 'EUR'}}</p>
+    <p *ngIf="appLoc.location">Situé à {{appLoc.location}}</p>
+    <p>Mis en ligne {{ appLoc.createDate | date: 'le d MMMM yyyy' }}</p>
+    
+  </div>
