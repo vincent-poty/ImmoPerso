@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppLoc } from '../models/appLoc.model';
 
 @Component({
@@ -9,9 +10,12 @@ import { AppLoc } from '../models/appLoc.model';
 export class AppartLocataireComponent implements OnInit {
 @Input() appLoc!: AppLoc;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+    versDetails(): void{
+      this.router.navigateByUrl('immoLocataire/:id');
+    }
+  }
 
-}

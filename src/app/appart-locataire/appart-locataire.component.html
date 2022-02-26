@@ -7,5 +7,7 @@
     <p> Provision des charges de {{ appLoc.prixCharges | currency: 'EUR'}}</p>
     <p *ngIf="appLoc.location">Situé à {{appLoc.location}}</p>
     <p>Mis en ligne {{ appLoc.createDate | date: 'le d MMMM yyyy' }}</p>
-    
+    <p>
+        <button (click)="versDetails()" >En savoir plus</button>
+    </p>
   </div>

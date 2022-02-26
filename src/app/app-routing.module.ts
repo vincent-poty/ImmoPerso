@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppLocataireListComponent } from './app-locataire-list/app-locataire-list.component';
-import { AppartLocataireComponent } from './appart-locataire/appart-locataire.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SingleAppLocComponent } from './single-app-loc/single-app-loc.component';
 
 const routes: Routes = [
-  {path: '', component: LandingPageComponent},
-  {path:'immoLocataire', component: AppLocataireListComponent }
+  { path: 'immoLocataire/:id', component: SingleAppLocComponent},
+  { path: '', component: LandingPageComponent},
+  { path:'immoLocataire', component: AppLocataireListComponent }
 ];
 
 @NgModule({

@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AppartLocataireComponent } from './appart-locataire/appart-locataire.component';
 import { AppLocataireListComponent } from './app-locataire-list/app-locataire-list.component';
+import { SingleAppLocComponent } from './single-app-loc/single-app-loc.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AppLocataireListComponent } from './app-locataire-list/app-locataire-li
     HeaderComponent,
     LandingPageComponent,
     AppartLocataireComponent,
-    AppLocataireListComponent
+    AppLocataireListComponent,
+    SingleAppLocComponent
   ],
   imports: [
     BrowserModule,
