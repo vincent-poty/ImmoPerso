@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,12 +9,18 @@ import { Router } from '@angular/router';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private auth: AuthService) { }
 
   ngOnInit(): void {
   }
 
   onContinue(): void{
+    this.router.navigateByUrl('immoLocataire');
+  }
+
+  onLogin(): void{
+    this.auth.login();
     this.router.navigateByUrl('immoLocataire');
   }
 }

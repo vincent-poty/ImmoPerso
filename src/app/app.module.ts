@@ -9,6 +9,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AppartLocataireComponent } from './appart-locataire/appart-locataire.component';
 import { AppLocataireListComponent } from './app-locataire-list/app-locataire-list.component';
 import { SingleAppLocComponent } from './single-app-loc/single-app-loc.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OwnerEncodeComponent } from './owner-encode/owner-encode.component';
+import { FormsModule } from '@angular/forms';
+import { DoBootstrap } from '@angular/core';
 
 
 @NgModule({
@@ -18,11 +22,14 @@ import { SingleAppLocComponent } from './single-app-loc/single-app-loc.component
     LandingPageComponent,
     AppartLocataireComponent,
     AppLocataireListComponent,
-    SingleAppLocComponent
+    SingleAppLocComponent,
+    OwnerEncodeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'}

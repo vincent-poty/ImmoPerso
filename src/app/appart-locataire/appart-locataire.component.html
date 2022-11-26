@@ -1,12 +1,12 @@
 <div class="app-loc-card" >
     
-    <h2>{{appLoc.Name | titlecase}}</h2>
-    <img [src]="appLoc.imageUrl" [title]="appLoc.Name" [alt]="appLoc.Name">
-    <p>{{ appLoc.description }}</p>
-    <p> Loyer mensuel de {{ appLoc.prixLoyer| currency: 'EUR'}}</p>
-    <p> Provision des charges de {{ appLoc.prixCharges | currency: 'EUR'}}</p>
-    <p *ngIf="appLoc.location">Situé à {{appLoc.location}}</p>
-    <p>Mis en ligne {{ appLoc.createDate | date: 'le d MMMM yyyy' }}</p>
+    <h2>{{rents.Name | titlecase}}</h2>
+    <img [src]="rents.imageUrl" [title]="rents.Name" [alt]="rents.Name">
+    <p>{{ rents.description }}</p>
+    <p> Loyer mensuel de {{ rents.prixLoyer| currency: 'EUR'}}</p>
+    <p> Provision des charges de {{ rents.prixCharges | currency: 'EUR'}}</p>
+    <p *ngIf="rents.location">Situé à {{rents.location}}</p>
+    <p>Mis en ligne {{ rents.createDate | date: 'le d MMMM yyyy' }}</p>
     <p>
         <button (click)="versDetails()" >En savoir plus</button>
     </p>

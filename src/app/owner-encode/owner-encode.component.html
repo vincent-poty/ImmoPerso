@@ -1,0 +1,119 @@
+<div class="container mt-2">
+    <div class="card p-3">
+        <h2 class="card-title">Insertion d'un nouveau Bien à louer</h2>
+        <form class="card-text">
+            <div class="row align-items-center mt-2">
+                <div class="col col-3">
+                    <label for="name">Nom</label>
+                </div>
+                <div class="col">
+                    <input type="text" name="name" id="name" maxlength="50" placeholder="label" autofocus>
+                </div>
+            </div>
+            <div class="row align-items-center mt-2">
+                <div class="col col-3">
+                    <label for="description">Description du bien</label>
+                </div>
+                <div class="col">
+                    <input type="text" name="description" id="description" placeholder="petite description">
+                </div>
+            </div>
+            <div class="row align-items-center mt-2">
+                <div class="col col-3">
+                    <label for="imageURL">Photo</label>
+                </div>
+                <div class="col">
+                    <input type="url" name="imageURL" id="imageURL" placeholder="Lien image">
+                </div>
+            </div>
+            <div class="row align-items-center mt-2">
+                <div class="col col-3">
+                    <label for="prixLoyer">Prix du loyer en €</label>
+                </div>
+                <div class="col">
+                    <input type="number" name="prixLoyer" id="prixLoyer" placeholder="00,00">
+                </div>
+            </div>
+            <div class="row align-items-center mt-2">
+                <div class="col col-3">
+                    <label for="prixCharges">Prix des charges en €</label>
+                </div>
+                <div class="col">
+                    <input type="number" min="5" max="10000" name="prixCharges" id="prixCharges" placeholder="00,00">
+                </div>
+            </div>
+            <div class="row align-items-center mt-2">
+                <div class="col col-3">
+                    <label for="surface">Surface en m²</label>
+                </div>
+                <div class="col">
+                    <input type="number" name="surface" id="surface" placeholder="00,00">
+                </div>
+            </div>
+            <div class="row align-items-center mt-2">
+                <div class="col col-3">
+                    <label for="numberRoom">Nombre de chambre</label>
+                </div>
+                <div class="col">
+                    <input type="number" max="1000" name="numberRoom" id="numberRoom" placeholder="100">
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-2">
+                <div class="col col-3">
+                    <label for="Localisation">Commune</label>
+                </div>
+                <div class="col">
+                    <input type="text" name="Localisation" id="Localisation" placeholder="Bruxelles">
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-success justify-content-center" type="button"
+                    (click)="save()">Enregistrer</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h1>Liste des Biens:</h1>
+    </div>
+</div>
+
+<!-- <div *ngIf="rents && rents.length">
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <tr >
+                <th>Nom</th>
+                <th>description</th>
+                <th>Image</th>
+                <th>prix location</th>
+                <th>prix des charges</th>
+                <th>Surface</th>
+                <th>nombre de chambre</th>
+                <th>localisation</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let rent of rents">
+                <td>{{rent.Name}}</td>
+                <td>{{rent.description}}</td>
+                <td>{{rent.imageUrl}}</td>
+                <td>{{rent.prixLoyer}}</td>
+                <td>{{rent.prixCharges}}</td>
+                <td>{{rent.surface}}</td>
+                <td>{{rent.nombreChambre}}</td>
+                <td>{{rent.location}}</td>
+                <td><button class="btn btn-primary" >
+                    Modifier
+                </button>
+                </td>
+                <td><button class="btn btn-danger" >
+                    Supprimer
+                </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->

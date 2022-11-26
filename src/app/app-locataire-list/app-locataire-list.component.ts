@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { AppLoc } from '../models/appLoc.model';
 import { AppLocService } from '../service/appLoc.service';
+import { Location } from '@angular/common';
+import { Rent } from '../service/rent';
 
 @Component({
   selector: 'app-app-locataire-list',
@@ -9,13 +12,12 @@ import { AppLocService } from '../service/appLoc.service';
 })
 export class AppLocataireListComponent implements OnInit {
 
-  appLocs!: AppLoc[];
+  rents: Rent[] = [];
 
   constructor(private appLocService: AppLocService) { }
 
   ngOnInit(): void {
-    this.appLocs = this.appLocService.getAllAppLocs();
+   this.appLocService.getRents().subscribe(rents => this.rents = rents);
   }
-
 
 }
